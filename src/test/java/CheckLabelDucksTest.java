@@ -12,7 +12,7 @@ public class CheckLabelDucksTest extends TestBase {
         String labelTextYellowDuck =
                 driver.findElement(By.xpath("//div[@class=\"sticker sale\"][contains(text(), 'Sale')]")).getText();
         System.out.println(labelTextYellowDuck);
-        Assert.assertEquals(labelTextYellowDuck, "SALE");
+        Assert.assertEquals(labelTextYellowDuck, "SAL");
     }
 
     @Test
