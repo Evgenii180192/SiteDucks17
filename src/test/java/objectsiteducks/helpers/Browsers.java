@@ -1,4 +1,4 @@
-package objectsiteducks;
+package objectsiteducks.helpers;
 
 public enum Browsers {
     chrome,

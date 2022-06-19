@@ -1,12 +1,8 @@
-import objectsiteducks.Browsers;
 import objectsiteducks.NavigationSiteDucks;
 import objectsiteducks.SortDucks;
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -14,14 +10,6 @@ public class SortDucksTest extends TestBase {
 
     @Test
     public void sortDuckNameTest() {
-        Browsers browser = Browsers.valueOf(System.getProperty("browser", "chrome"));
-        switch (browser) {
-            case chrome: driver = new ChromeDriver(); break;
-            case firefox: driver = new FirefoxDriver(); break;
-        }
-        driver.get("https://litecart.stqa.ru/en/");
-        driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
         SortDucks sortDucks = new SortDucks(driver);
         NavigationSiteDucks navigationSiteDucks = new NavigationSiteDucks(driver);
         navigationSiteDucks.clickSubcategory();
@@ -52,14 +40,6 @@ public class SortDucksTest extends TestBase {
 
     @Test
     public void sortDucksPriceTest() {
-        Browsers browser = Browsers.valueOf(System.getProperty("browser", "chrome"));
-        switch (browser) {
-            case chrome: driver = new ChromeDriver(); break;
-            case firefox: driver = new FirefoxDriver(); break;
-        }
-        driver.get("https://litecart.stqa.ru/en/");
-        driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
         SortDucks sortDucks = new SortDucks(driver);
         NavigationSiteDucks navigationSiteDucks = new NavigationSiteDucks(driver);
         navigationSiteDucks.clickSubcategory();
