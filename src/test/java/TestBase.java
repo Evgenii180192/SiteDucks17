@@ -18,7 +18,6 @@ public class TestBase {
 
     @BeforeMethod
     public void openBrowser() {
-        if (driver == null) {
             Browsers browser = Browsers.valueOf(System.getProperty("browser", "chrome"));
             switch (browser) {
                 case chrome: {
@@ -35,7 +34,7 @@ public class TestBase {
             driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
             driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(30));
         }
-    }
+
 
     @AfterMethod
     public void closeBrowser() {
