@@ -18,6 +18,7 @@ public class TestBase {
             Browsers browser = Browsers.valueOf(System.getProperty("browser", "chrome"));
             switch (browser) {
                 case chrome: {
+                    System.setProperty("webdriver.chrome.driver","C:\\SeleniumDrivers\\chromedriver.exe");
                     driver = new ChromeDriver();
                     break;
                 }
