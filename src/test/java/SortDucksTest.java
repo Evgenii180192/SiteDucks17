@@ -1,3 +1,4 @@
+import io.qameta.allure.Description;
 import objectsiteducks.NavigationSiteDucks;
 import objectsiteducks.SortDucks;
 import org.openqa.selenium.By;
@@ -8,6 +9,7 @@ import java.util.Collections;
 
 public class SortDucksTest extends TestBase {
 
+    @Description("Sorting ducks by name")
     @Test
     public void sortDuckNameTest() {
         SortDucks sortDucks = new SortDucks(driver);
@@ -38,6 +40,7 @@ public class SortDucksTest extends TestBase {
         Assert.assertEquals(sortListNameDucks, notSortListNameDucks);
     }
 
+    @Description("Sorting ducks by price")
     @Test
     public void sortDucksPriceTest() {
         SortDucks sortDucks = new SortDucks(driver);

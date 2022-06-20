@@ -1,9 +1,13 @@
+import io.qameta.allure.Description;
+import io.qameta.allure.Story;
 import objectsiteducks.NavigationSiteDucks;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class CheckLabelDucksTest extends TestBase {
+
+    @Description("Yellow duck label check")
     @Test
     public void checkLabelYellowDuck() {
         NavigationSiteDucks navigationSiteDucks = new NavigationSiteDucks(driver);
@@ -11,9 +15,10 @@ public class CheckLabelDucksTest extends TestBase {
         String labelTextYellowDuck =
                 driver.findElement(By.xpath("//div[@class=\"sticker sale\"][contains(text(), 'Sale')]")).getText();
         System.out.println(labelTextYellowDuck);
-        Assert.assertEquals(labelTextYellowDuck, "SALE");
+        Assert.assertEquals(labelTextYellowDuck, "SAL");
     }
 
+    @Description("Green duck label check")
     @Test
     public void checkLabelGreenDuck() {
         NavigationSiteDucks navigationSiteDucks = new NavigationSiteDucks(driver);

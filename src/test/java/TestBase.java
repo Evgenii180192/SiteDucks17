@@ -23,6 +23,7 @@ public class TestBase {
                     break;
                 }
                 case firefox: {
+                    System.setProperty("webdriver.firefox.driver","C:\\SeleniumDrivers\\geckodriver.exe");
                     driver = new FirefoxDriver();
                     break;
                 }

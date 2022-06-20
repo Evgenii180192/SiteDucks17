@@ -1,8 +1,11 @@
+import io.qameta.allure.Story;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import objectsiteducks.NavigationSiteDucks;
 
+@Story("Checking the transition on all links in the header of the main page")
 public class NavigationSiteDucksTest extends TestBase {
+
 
     @Test
     public void loadingOpenSiteDucksTest() {
