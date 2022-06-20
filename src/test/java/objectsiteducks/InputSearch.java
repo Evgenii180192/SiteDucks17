@@ -17,7 +17,6 @@ public class InputSearch {
     public void inputSearchField() {
         WebElement elementInputSearch = driver.findElement(By.xpath("//input[@type=\"search\"]"));
         elementInputSearch.click();
-        elementInputSearch.sendKeys("Purple Duck");
-        elementInputSearch.sendKeys(Keys.ENTER);
+        elementInputSearch.sendKeys("Purple Duck", Keys.ENTER);
     }
 }

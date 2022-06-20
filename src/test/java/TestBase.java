@@ -8,9 +8,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import java.time.Duration;
 
-import static objectsiteducks.helpers.Browsers.chrome;
-import static objectsiteducks.helpers.Browsers.firefox;
-
 @Listeners(ScreenshotListener.class)
 public class TestBase {
 
@@ -30,9 +27,9 @@ public class TestBase {
                 }
             }
             driver.get("https://litecart.stqa.ru/en/");
-            driver.manage().window().maximize();
-            driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+            driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
             driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(30));
+            driver.manage().window().maximize();
         }
 
 
